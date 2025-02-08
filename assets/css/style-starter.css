@@ -9922,7 +9922,8 @@ header {
   opacity: 0.95; }
 
 .navbar .navbar-brand img {
-  max-width: 140px;
+  max-width: 100px; /* set max width 100px from 140px */
+  height: 80px; /* logo height updated */
   transition: all 0.5s ease; }
 
 .navbar-expand-lg .navbar-nav .nav-link span.fa {
@@ -10373,7 +10374,7 @@ a.view:hover {
   margin: 24px 0; }
 
 .w3l-main-slider .banner-info-bg {
-  max-width: 850px;
+  /* max-width: 850px; */
   padding: 50px 0;
   margin-top: 50px; }
 
