@@ -136,12 +136,13 @@
         <div class="container py-lg-5 py-md-3">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="d-flex ">
+                    <p>Click below to download the Sambuddha PDF form for...</p>
+                    <div class="d-flex mt-3">
                         <div class="">
-                            <a href="assets/pdf/sambuddha-marriage-bureau.pdf" class="btn btn-primary btn-style" id="downloadMarriageBureau" >Marriage Bureau</a>
+                            <button  class="btn btn-primary btn-style" id="downloadGlobalFoundation">Global Foundation</button>
                         </div>
                         <div class="ml-3">
-                            <a href="assets/pdf/sambuddha-global-foundation.pdf" class="btn btn-primary btn-style" id="downloadGlobalFoundation">Global Foundation</a>
+                            <button  class="btn btn-primary btn-style" id="downloadMarriageBureau" >Marriage Bureau</button>
                         </div>
                     </div>
 
@@ -405,19 +406,33 @@
     <!-- //bootstrap-->
 
     <!-- scropt for downloading upcomming event form -->
-    <!-- <script>
-        document.getElementById('downloadMarriageBureau').addEventListener('click', function(event) {
-            event.preventDefault(); 
-            window.location.href = 'assets/pdf/sambuddha-marriage-bureau.pdf';
-            document.querySelector('#upcoming-events').scrollIntoView();
+    <!-- assets/pdf/sambuddha-marriage-bureau.pdf -->
+    <!-- assets/pdf/sambuddha-global-foundation.pdf -->
+    <script>
+        // Function to trigger download without page redirection
+        function downloadFile(filePath) {
+            const a = document.createElement('a');
+            a.href = filePath;  
+            a.download = filePath.split('/').pop();  
+            a.style.display = 'none'; 
+    
+            document.body.appendChild(a);
+            a.click();
+    
+            document.body.removeChild(a);
+        }
+    
+        document.getElementById('downloadMarriageBureau').addEventListener('click', function() {
+            downloadFile('assets/pdf/sambuddha-marriage-bureau.pdf');
         });
-
-        document.getElementById('downloadGlobalFoundation').addEventListener('click', function(event) {
-            event.preventDefault();
-            window.location.href = 'assets/pdf/sambuddha-global-foundation.pdf';
-            document.querySelector('#upcoming-events').scrollIntoView();
+    
+        document.getElementById('downloadGlobalFoundation').addEventListener('click', function() {
+            downloadFile('assets/pdf/sambuddha-global-foundation.pdf');
         });
-    </script> -->
+    </script>
+    
+    
+    
 
 
 </body>
