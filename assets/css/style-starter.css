@@ -739,7 +739,33 @@ pre {
   transition: all 0.5s;
 }
 
+/* css for upcoming event animated text */
+.upcoming-evnt {
+  background: linear-gradient(to right, rgb(242, 6, 238) 20%, red 40%, #f09b08 60%, blue 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
+  animation: shine 1s linear infinite, bounce 1s ease-in-out infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
 @media (min-width: 576px) {
   .col-sm {
