@@ -119,90 +119,18 @@
     <!-- main-slider -->
     <section class="w3l-main-slider" id="home">
         <div class="companies20-content">
-            <div class="owl-one owl-carousel owl-theme">
+            <div class="owl-theme">
                 <div class="item">
                     <li>
-                        <div class="slider-info banner-view bg bg2">
-                            <div class="banner-info ">
-                                <div class="container">
-                                    <div class="banner-info-bg text-left">
-                                        <!-- <div class=""> -->
-                                        <div class="col-sm-12 col-md-12 col-lg-7">
-                                            <p>Sambuddha Global</p>
-                                            <h5>Charity, Faith and Hope. Help the Homeless. Charity life.</h5>
-                                            <a href="about.html" class="btn btn-primary btn-style">Read More</a>
-                                        </div>
-                                        <!-- <div class=" col-lg-5 ">
-
-                                            </div> -->
-                                        <!-- </div> -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                <div class="item">
-                    <li>
-                        <div class="slider-info  banner-view banner-top1 bg bg2">
-                            <div class="banner-info">
-                                <div class="container">
-                                    <div class="banner-info-bg text-left">
-
-                                        <!-- <div class="d-flex"> -->
-                                        <div class="col-sm-12 col-md-12 col-lg-10">
-                                            <p>Save Buddhist Monk </p>
-                                            <h5>Donate with Kindness. Every amount Donated by you Counts.
-                                            </h5>
-                                            <a href="about.html" class="btn btn-primary btn-style">Read
-                                                More</a>
-                                        </div>
-                                        <!-- <div class="col-lg-2 ">
-
-                                            </div> -->
-                                        <!-- </div> -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                <div class="item">
-                    <li>
-                        <div class="slider-info banner-view banner-top2 bg bg2">
-                            <div class="banner-info">
-                                <div class="container">
-                                    <div class="banner-info-bg text-left">
-                                        <div class="col-sm-12 col-md-12 col-lg-7 ">
-                                            <p>Unconditional Help</p>
-                                            <h5>Give a Helping hand. We all need to come together. Our Mission.</h5>
-                                            <a href="about.html" class="btn btn-primary btn-style">Read More</a>
-                                        </div>
-                                        <!-- <div class="col-lg-5">
-                                            
-                                        </div> -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                <div class="item">
-                    <li>
-                        <div class="slider-info banner-view banner-top3 bg bg2">
+                        <div class="banner-view">
                             <div class="banner-info">
                                 <div class="container">
                                     <div class="banner-info-bg text-left d-flex">
-                                        <!-- <div class=""> -->
                                         <div class="col-sm-12 col-md-12 col-lg-7">
-                                            <p>Unconditional Help</p>
-                                            <h5>Should Children suffer this way? Don't leave Orphans alone</h5>
+                                            <p id="banner-paragraph"></p>
+                                            <h5 id="banner-header"></h5>
                                             <a href="about.html" class="btn btn-primary btn-style">Read More</a>
                                         </div>
-                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -212,16 +140,17 @@
             </div>
         </div>
     </section>
+    
     <!-- /main-slider -->
     <!-- banner image bottom shape -->
-    <div class="position-relative">
+    <!-- <div class="position-relative">
         <div class="shape overflow-hidden">
             <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor">
                 </path>
             </svg>
         </div>
-    </div>
+    </div> -->
     <!-- //banner image bottom shape -->
     <!-- home page block1 -->
     <section class="homeblock1">
@@ -557,14 +486,16 @@
                                     <p> Mumbai zen master .606.primus business park Road no 16a. Opp MSEB Office. Ambika
                                         nagar wagle industrial estate Thane West 400604<br>
                                         <b>
-                                            Nagpur Address:</b> Zen House Plot no 9 .gali no 8L. Chandramani nagar
-                                        Nagpur 400027
+                                            Nagpur Address:</b> Sambuddha global foundation 
+                                            1st floor rajat sankul .enfeld showroom indora .nagpur 440017.
                                     </p>
                                 </div>
                                 <div class="column">
                                     <h4>Call Us</h4>
                                     <p>Mon - Fri 10:30 -18:00</p>
-                                    <p><a href="tel:+91 9892567445">9892567445</a></p>
+                                    <p class="py-2"><a href="tel:+91 8446665569">+91&nbsp;8446665569</a></p>
+                                    <p><a href="tel:+91 9892567445">+91&nbsp;9892567445</a></p>
+
                                 </div>
                                 <div class="column">
                                     <h4>Mail Us</h4>
@@ -758,6 +689,62 @@
     <!--bootstrap-->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
+
+    <!-- hero section content update -->
+     <script>
+       const paragraphs = [
+    "Sambuddha Global",
+    "Save Buddhist Monk",
+    "Unconditional Help",
+    "Unconditional Help"
+];
+
+const headers = [
+    "Charity, Faith and Hope. Help the Homeless. Charity life.",
+    "Donate with Kindness. Every amount Donated by you Counts.",
+    "Give a Helping hand. We all need to come together. Our Mission.",
+    "Should Children suffer this way? Don't leave Orphans alone"
+];
+
+let pIndex = 0;
+let hIndex = 0;
+
+function updateText() {
+    // Get elements to update
+    const paragraphElement = document.getElementById("banner-paragraph");
+    const headerElement = document.getElementById("banner-header");
+
+    // Add fade-out class to animate disappearing
+    paragraphElement.classList.add('fade');
+    headerElement.classList.add('fade');
+
+    // Change text after 1s (to allow fade-out animation)
+    setTimeout(() => {
+        paragraphElement.textContent = paragraphs[pIndex];
+        headerElement.textContent = headers[hIndex];
+
+        // Remove fade class for the next animation
+        paragraphElement.classList.remove('fade');
+        headerElement.classList.remove('fade');
+
+        // Add the slide-in effect class to both elements
+        paragraphElement.classList.add('slideInText');
+        headerElement.classList.add('slideInText');
+
+        // Update indexes for the next iteration
+        pIndex = (pIndex + 1) % paragraphs.length;
+        hIndex = (hIndex + 1) % headers.length;
+    }, 1000); // 1000ms delay for fading out
+
+}
+
+// Call the function to update text every 10 seconds
+setInterval(updateText, 10000); // 10000ms = 10 seconds
+
+// Initial update
+updateText();
+
+     </script>
 </body>
 
 </html>
